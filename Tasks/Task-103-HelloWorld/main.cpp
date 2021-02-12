@@ -42,9 +42,16 @@ int main()
 
         //Add 1 to the counter "variable"
         counter = counter + 1;
+        
+        //Clear LCD
+        lcd.cls();
 
         //Display in the terminal
         printf("Count: %d\n", counter);
+
+        //Display in the LCD
+        lcd.printf("Count: %d\n", counter);
+
 
         //Wait
         wait_us(WAIT_TIME_MS * 1000);
