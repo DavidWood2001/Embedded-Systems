@@ -9,7 +9,7 @@
 //
 // Each symbol is followed by 150ms OFF time
 // Each letter is followed by a further 300 ms OFF time
-// Each word is follwed by a further 450 ms OFF time
+// Each word is followed by a further 450 ms OFF time
 //
 // University of Plymouth 
 // Chris Tipney September 2020 V1.0
