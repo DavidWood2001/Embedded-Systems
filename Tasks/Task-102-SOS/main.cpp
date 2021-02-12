@@ -27,7 +27,7 @@ int main()
 
 
         //Off for 500ms
-        greenLED = 0;
+        greenLED = 1;
         buzz.playTone("C", Buzzer::HIGHER_OCTAVE);
         wait_us(WAIT_TIME_MS * 1000);  //500ms
 
