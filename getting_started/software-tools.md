@@ -50,11 +50,17 @@ Once you have created your account, please tell us what your username is:
 This will help us better support you. Never disclose your password!
 
 ### Installing Mbed Studio
-The first step is to download and install the version of Mbed Studio for your computer.
+The first step is to download and install the version of Mbed Studio for your computer, but there are a couple checks you should do first.
 
 > [Click this link to download Mbed-Studio](https://os.mbed.com/studio/)
 
-Run the installer and you will probably find it is mostly self-explanatory. You can choose default options. Since version `1.0`, many of the additional tools needed for this software come included.
+**Failing to ensure the following risks the software install to (silently) fail.**
+* Check there are no pending restarts due to a Windows update. 
+* Check there is sufficient disk space on your system drive.
+
+Once you system is ready, run the installer and you will probably find it is mostly self-explanatory. It is suggested you install "for all users". Other than that, choose default options. Since version `1.0`, many of the additional tools needed for this software come included.
+
+In the event you do need to reinstall, see the [section on troubleshooting](troubleshooting.md#Failed-installations-and-Reinstalling-Mbed-Studio) first.
 
 ### Connecting your Target Board
 The software that allows your PC to recognize your target board comes with Mbed Studio. The most important of these is the ST Link Driver.
@@ -116,12 +122,22 @@ At some point, the tutor will email you a link to obtain a copy of various proje
 
 [Click here to watch a video explaining how to do this](https://plymouth.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=e15dcb65-dbcc-404f-a4f1-abfe00ee6f33)
 
-> **IMPORTANT** - Clone the files **outside** of any folder that is synchronized to the cloud (such as OneDrive, DropBox or iCloud). Building software generates thousands (even millions) of small temporary files which you probably do NOT want to synchronize to the cloud. To do so would use unnecessary CPU and network bandwidth.
+> **IMPORTANT - PLEASE READ**
 >
-> On a personal machine (not shared with anyone else), I clone all my files in the folder `C:\git`. You could also clone in `C:\Users\<username>` _where `<username>` refers to your username_.
+> Clone the files **outside** of any folder that is synchronized to the cloud (such as OneDrive, DropBox or iCloud). Building software generates thousands (even millions) of small temporary files which you probably do NOT want to synchronize to the cloud. To do so would use unnecessary CPU and network bandwidth.
+>
+> On a personal machine (not shared with anyone else), I strongly suggest you use a folder with a short path and no spaces, such as `C:\git`. You could also clone in `C:\Users\<username>` _where `<username>` refers to your username_.
+>
+> GitHubDesktop tends to default to your `Documents` folder. **I DO NOT RECOMMEND YOU USE THIS** when using Mbed
 
 ### Pulling Updates
 Occasionally, the notes and sample code will be changed. Before you start any work, it is strongly suggested you click the "Fetch Origin" button in GitHub desktop.
+
+### Making your own edits
+I suggest you create your own repository for your own work. Copy the tasks from the Embedded-Systems repository into your own workspace. This way:
+
+* You can push your changes to your own private repository
+* You can easy obtain updates to the tasks / notes without having to merge them into your own code
 
 ### Different between GitHub and a Cloud Provider
 You may already be using a cloud service, such as OneDrive, iCloud or DropBox. These services monitor a collection of folders and mirror everything in the cloud. This is often done in the background while you work.
@@ -134,6 +150,15 @@ A key difference is:
 * With Git and GitHub, **we** choose when the files are synchronized and in which direction. However, this does mean getting into the habit of doing this.
 
 There is much more than could be said about these tools, but for now, we will leave this and focus on coding.
+
+### Pull Requests (advanced)
+GitHub has great support for "Pull Requests". If you find an error in the notes or the Tasks, you can do the following:
+
+* Create a branch for the fix using the Embedded-Systems repository
+* Make the edit
+* Commit the change and push (it will offer a pull request)
+
+This will generate an email for the tutor to review your proposed changes and the option to merge them in.
 
 ## PuTTY Serial Terminal
 This is useful and may be used at different times
